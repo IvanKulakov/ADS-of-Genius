@@ -98,7 +98,7 @@
 
 
 .services_background{
-  margin-top: 130px;
+  margin-top: 80px;
 }
 .services_text_top{
   margin-bottom: 40px;
@@ -559,6 +559,19 @@
 
 .invisible{
   display: none;
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+.logos_swipe{
+  width: 256px;
+  height: 114px;
+  border-radius: 24px;
+  background-color: #080808;
+
 }
 
 
