@@ -1,7 +1,7 @@
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
-    slidesPerView: 5,
+    slidesPerView: 4,
     loop: true,
     autoplay: {
       delay: 2000,
