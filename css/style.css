@@ -268,13 +268,52 @@
 .marketing_content_block{
   position: relative;
   width: 46%;
+  z-index: 0;
 }
+
 .marketing_content_box{
   background-color: #0B0B0B;
   padding: 26px;
   border: 1px solid #232121;
   border-radius: 24px;
+  animation: open 2s;
 }
+
+@keyframes open{
+  0%{
+    opacity: 0;
+    transform: translateX(-5%);
+  }
+  50%{
+    opacity: 1;
+    transform: translateX(5%);
+
+  }
+  100%{
+    transform: translateX(0%);
+
+  }
+}
+@keyframes closed{
+  0%{
+    opacity: 1;
+    transform: translateX(-5%);
+  }
+  50%{
+    opacity: .5;
+    transform: translateX(5%);
+
+  }
+  100%{
+    opacity: 0;
+    transform: translateX(0%);
+
+  }
+}
+.marketing_content_invisible{
+  display: none;
+}
+
 .marketing_content{
   display: flex;
   flex-direction: row;
@@ -285,6 +324,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 999;
 }
 .marketing_item_box{
   display: flex;

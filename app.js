@@ -27,8 +27,8 @@ try {
     const idForItems = () =>{
         for(let i = 0; i < marketKB.length; i++){
             marketKB[i].id ='marketKB' + i;
-            marketKB[i].classList.add('invisible');
-            marketKB[0].classList.remove('invisible');
+            marketKB[i].classList.add('marketing_content_invisible');
+            marketKB[0].classList.remove('marketing_content_invisible');
         }
         for(let i = 0; i < marketBtn.length; i++){
             marketBtn[i].id ='marketBtn' + i;
@@ -48,8 +48,8 @@ try {
     const setActive = (e) => {
         let action = Number(e.target.id.slice(-1));
         for(let i = 0; i < marketKB.length; i++){
-            marketKB[i].classList.add('invisible');
-            marketKB[action].classList.remove('invisible');
+            marketKB[i].classList.add('marketing_content_invisible');
+            marketKB[action].classList.remove('marketing_content_invisible');
         }
         for(let i = 0; i < marketSVG.length; i++){
             marketSVG[i].classList.remove('marketing_svg_btn_action');
