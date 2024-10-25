@@ -23,7 +23,6 @@ try {
     const marketSVG = document.getElementsByClassName('marketing_svg_btn');
     const marketItemName = document.getElementsByClassName('marketing_item_name');
 
-
     const idForItems = () =>{
         for(let i = 0; i < marketKB.length; i++){
             marketKB[i].id ='marketKB' + i;
@@ -37,6 +36,7 @@ try {
         for(let i = 0; i < marketSVG.length; i++){
             marketSVG[i].id ='marketSVG' + i;
             marketSVG[0].classList.add('marketing_svg_btn_action');
+
         }
         for (let i = 0; i < marketItemName.length; i++){
             marketItemName[i].id ='marketItemName' + i;
@@ -44,9 +44,14 @@ try {
         }
     }
 
-
     const setActive = (e) => {
-        let action = Number(e.target.id.slice(-1));
+        let action
+        if (e.target.id.length !== 0){
+            action = Number(e.target.id.slice(-1));
+        }
+        else {
+            action = Number(e.target.parentNode.id.slice(-1))
+        }
         for(let i = 0; i < marketKB.length; i++){
             marketKB[i].classList.add('marketing_content_invisible');
             marketKB[action].classList.remove('marketing_content_invisible');
