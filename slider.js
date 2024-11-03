@@ -1,18 +1,16 @@
-const swiper = new Swiper('.swiper', {
+const slider = document.querySelector('.swiper');
+const sl = new Swiper(slider, {
     // Optional parameters
     direction: 'horizontal',
     slidesPerView: 4,
     loop: true,
-    autoplay: {
-      delay: 0,
-      stopOnLastSlide: false,
-      disableOnInteraction: false,
-    },
+    spaceBetween: 30,
     speed: 2000,
+    autoplay: {
+        disableOnInteraction: false,
+        enabled: true,
+        delay: 0,
+        pause: false,
 
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-    },
-
+    }
 });

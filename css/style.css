@@ -435,10 +435,7 @@
   margin-bottom: 60px;
 }
 .industries_item{
-  padding-top: 64px;
-  padding-bottom: 28px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 64px 30px 28px 30px;
   background-color: #101010;
   border-radius: 24px;
   max-width: 25%;
@@ -602,8 +599,15 @@
 
 .swiper {
   width: 100%;
+  overflow: hidden;
 }
-
+.swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+.swiper-slide {
+  width: auto;
+}
 .logos_swipe{
   overflow: hidden;
   padding: 33px;
