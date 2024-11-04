@@ -634,7 +634,9 @@
 .swiper {
   width: 100%;
   overflow: hidden;
+  max-width: 1810px;
 }
+
 .swiper-wrapper {
   -webkit-transition-timing-function: linear !important;
   transition-timing-function: linear !important;
