@@ -1,3 +1,10 @@
+.invisible{
+  display: none;
+}
+.marketing_content_invisible{
+  display: none !important;
+}
+
 .main {
   font-family: "Manrope","Titan One", sans-serif;
   background: #000000;
@@ -162,6 +169,11 @@
   flex-direction: column;
   justify-content: flex-end;
 }
+.services_img_box_4{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 
 .services_img_box_svg{
   width: 97%;
@@ -298,19 +310,7 @@
   color: #2F00FF;
 }
 
-.marketing_content_block{
-  position: relative;
-  width: 46%;
-  z-index: 0;
-}
 
-.marketing_content_box{
-  background-color: #0B0B0B;
-  padding: 26px;
-  border: 1px solid #232121;
-  border-radius: 24px;
-  animation: open 2s;
-}
 
 @keyframes open{
   0%{
@@ -343,14 +343,13 @@
 
   }
 }
-.marketing_content_invisible{
-  display: none;
-}
+
 
 .marketing_content{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 600px;
 }
 .marketing_item_block{
   width: 50%;
@@ -360,8 +359,10 @@
   z-index: 999;
 }
 .marketing_item_box{
+  position: relative;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .marketing_item{
   border-radius: 20px;
@@ -412,8 +413,9 @@
   line-height: 42px;
   text-align: left;
   color: #ffffff;
-  margin-top: 58px;
   margin-bottom: 10px;
+  margin-left: 26px;
+  margin-right: 26px;
 }
 .marketing_content_item_text{
   font-size: 18px;
@@ -421,6 +423,8 @@
   line-height: 24px;
   text-align: left;
   color: #8D8D8D;
+  margin-left: 26px;
+  margin-right: 26px;
 
 }
 .marketing_content_button{
@@ -434,10 +438,40 @@
   margin-top: 22px;
   border: 1px solid #2F00FF;
   cursor: pointer;
+  width: fit-content;
+  margin-left: 26px;
+  margin-right: 26px;
+
 }
 .marketing_content_item_img{
   width: 100%;
 }
+.marketing_content_block{
+  width: 46%;
+  z-index: 0;
+}
+.marketing_content_box{
+  background-color: #0B0B0B;
+  border: 1px solid #232121;
+  border-radius: 24px;
+  animation: open 2s;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 26px;
+}
+.marketing_content_item_pos{
+  overflow: hidden;
+  padding-right: 26px;
+  padding-left: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 
 .industries_background{
   margin-top: 80px;
@@ -507,6 +541,20 @@
   border-radius: 24px;
   margin-top: 40px;
 }
+
+.research_background{
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+.research_title{
+  font-family: Manrope;
+  font-size: 55px;
+  font-weight: 800;
+  line-height: 66px;
+  text-align: center;
+  color: #ffffff;
+}
+
 
 .response_background{
   margin-bottom: 110px;
@@ -627,16 +675,13 @@
 
 }
 
-.invisible{
-  display: none;
-}
+
 
 .swiper {
   width: 100%;
   overflow: hidden;
   max-width: 1810px;
 }
-
 .swiper-wrapper {
   -webkit-transition-timing-function: linear !important;
   transition-timing-function: linear !important;
