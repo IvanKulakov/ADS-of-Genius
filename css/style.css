@@ -41,10 +41,11 @@
 }
 .navi_contact_button{
   background: #2F00FF;
-  padding: 10px 15px;
+  padding: 12px 22px;
+  border-radius: 40px;
   color: #ffffff;
-  text-transform: uppercase;
   font-size: 16px;
+  border: 1px solid #FFFFFF
 }
 
 .main_background{
@@ -79,6 +80,7 @@
   color: #fff;
   border-radius: 24px;
   cursor: pointer;
+  border: 1px solid #FFFFFF
 }
 .main_text_content{
   color: #ABABAB;
@@ -87,6 +89,9 @@
   line-height: 23px;
   text-align: left;
 
+}
+.main_text_content-color{
+  color: #2F00FF;
 }
 
 .part_logos{
@@ -98,21 +103,27 @@
 
 .services_background{
   margin-top: 80px;
+  margin-bottom: 190px;
 }
 .services_text_top{
   margin-bottom: 40px;
   font-size: 19px;
   font-weight: 800;
   line-height: 23px;
-  text-align: left;
+  text-align: center;
   color: #2F00FF;
+}
+.services_text_box{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .services_text{
   font-size: 55px;
   font-weight: 800;
   line-height: 66px;
-  text-align: left;
-  width: 75%;
+  text-align: center;
+  width: 80%;
   color: #fff;
   margin-bottom: 85px;
 }
@@ -124,16 +135,40 @@
   color: #fff;
   line-height: 38px;
 }
+.services_text_content_span{
+  color: #2F00FF;
+
+}
 .services_img_block{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1810px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
 }
 .services_img_box{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.services_img_box_3{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.services_img_box_2{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.services_img_box_svg{
+  width: 97%;
+  height: auto;
+}
+.services_img_box_svg_mb{
+  margin-bottom: 24px;
 }
 
 .command_background{
@@ -146,7 +181,6 @@
   line-height: 66px;
   text-align: left;
   color: #ffffff;
-  width: 80%;
 }
 .command_text_h2{
   font-size: 17px;
@@ -678,6 +712,11 @@
 @media (min-width: 1210px) {
   .wrapper {
     max-width: 1160px;
+  }
+}
+@media (min-width: 1440px) {
+  .wrapper {
+    max-width: 1340px;
   }
 }
 @media (min-width: 1810px) {
