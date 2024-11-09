@@ -55,6 +55,36 @@
   border: 1px solid #FFFFFF
 }
 
+.lang{
+  position: relative;
+  cursor: pointer;
+}
+.lang_closed{
+  display: none;
+
+}
+.lang_open{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: block;
+
+}
+
+
+
+.lang_icons{
+  display: flex;
+  align-items: center;
+}
+.lang_box_svg{
+  margin-left: 5px;
+}
+.lang_box_svg_lang{
+  width: 40px;
+  height: 24px;
+}
+
 .main_background{
   margin-top: 130px;
 }
@@ -568,7 +598,7 @@
 }
 .research_background_s{
   padding: 54px 100px 48px 100px;
-  width: 546px;
+  width: 542px;
   border-radius: 24px;
   box-sizing: border-box;
   border: 1px solid #232121;
@@ -578,7 +608,7 @@
 
 }
 .research_background_s1{
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #000000 92%), url("../img/s1.png") no-repeat center;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, #000000 92%), url("../img/s1.png") no-repeat center;
   background-size: cover;
 }
 .research_block_top_img_box{
@@ -629,7 +659,7 @@
   color: #ffffff;
 }
 .research_block_content_s1_ul{
-  margin-bottom: 512px;
+  margin-bottom: 32px;
 }
 .research_block_content_btn{
   padding: 20px 80px;
@@ -644,21 +674,55 @@
   cursor: pointer;
 }
 .research_background_s2{
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #000000 92%), url("../img/s2.png") no-repeat center;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, #000000 92%), url("../img/s2.png") no-repeat center;
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-left: 80px;
-  margin-right: 80px;
 }
 .research_background_s3{
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #000000 92%), url("../img/s3.png") no-repeat center;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, #000000 92%), url("../img/s3.png") no-repeat center;
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-left: 80px;
 }
+.research_background_s4{
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #000000 92%), url("../img/s4.png") no-repeat center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 80px;
+
+}
+.research_background_s5 {
+  background: linear-gradient(180deg, rgba(255, 255, 255, .25) 0%, #000000 92%), url("../img/s5.png") no-repeat center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 80px;
+}
+.research_background_s6{
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, #000000 92%), url("../img/s6.png") no-repeat center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 80px;
+}
+.research_background_s7{
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, #000000 92%), url("../img/s7.png") no-repeat center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 80px;
+}
+
+
 .research_block_content_s3_ul{
   margin-top: 74px;
 }
@@ -776,12 +840,34 @@
   display: flex;
   flex-direction: row;
   justify-content: start;
-  align-items: center;
+
+}
+.faq{
+  position: relative;
   width: 100%;
   border-bottom: 1px solid rgba(37, 37, 37, 1);
   padding-top: 30px;
   padding-bottom: 30px;
 }
+.faq_item_q{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq_item_q_svg{
+  padding: 20px;
+  transform: rotate(360deg);
+  transition: transform .5s;
+  transform-origin: center center;
+  cursor: pointer;
+}
+.faq_item_q_svg_active{
+  transform: rotate(180deg);
+  transition: transform .5s;
+  transform-origin: center center;
+}
+
 .faq_item_text{
   font-family: Manrope;
   font-size: 26px;
@@ -789,6 +875,34 @@
   text-align: left;
   color: #ffffff;
   margin-left: 20px;
+}
+.faq_ans{
+  opacity: 0;
+  top: -30px;
+  height: 0;
+  position: absolute;
+  z-index: -1;
+
+}
+.faq_ans_active{
+  position: relative;
+  height: fit-content;
+  top: 0;
+  opacity: 1;
+  transition: all 1s;
+
+}
+.faq_item_text_ans{
+  font-family: Manrope;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 500;
+  text-align: left;
+  color: #ffffff;
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
+
 }
 
 .line{

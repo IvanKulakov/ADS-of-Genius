@@ -90,3 +90,93 @@ try{
 catch (e){
     console.log(e)
 }
+//research start
+try{
+    const researchBlock = document.getElementById('research_block')
+    const researchBox = document.getElementById('research_box')
+    const researchLeftBtn = document.getElementById('research_nav_left');
+    const researchRightBtn = document.getElementById('research_nav_right');
+
+    const scrollRight = () => {
+        researchBlock.scrollBy((researchBox.offsetWidth + 80), 0);
+    }
+    const scrollLeft = () => {
+        researchBlock.scrollBy(-(researchBox.offsetWidth + 80), 0);
+    }
+
+    researchRightBtn.addEventListener('click', scrollRight);
+    researchLeftBtn.addEventListener('click', scrollLeft);
+}
+catch (e) {
+    console.log(e);
+}
+
+
+//research end
+
+// faq start
+try{
+    const openFaq = document.getElementsByClassName('faq_item_q_svg');
+    const itemQ = document.getElementsByClassName('faq_item_q');
+    const itemAns = document.getElementsByClassName('faq_ans');
+
+    const setIdForElemFaq = () => {
+        for (let i = 0; i < openFaq.length; i++){
+            openFaq[i].id = 'openFaq' + i;
+            openFaq[i].addEventListener('click', openAns)
+        }
+        for (let i = 0; i < itemQ.length; i++){
+            itemQ[i].id = 'itemQ' + i;
+        }
+        for (let i = 0; i < itemAns.length; i++){
+            itemAns[i].id = 'faq_ans' + i;
+        }
+    }
+
+    const openAns = (e) => {
+        let action;
+        if ( e.target.classList.contains('faq_item_q_svg')) {
+            action = Number(e.target.id.slice(-1))
+        }
+        if (!e.target.classList.contains('faq_item_q_svg')) {
+            action = Number(e.target.parentNode.id.slice(-1));
+        }
+        document.getElementById(`openFaq${action}`).classList.toggle('faq_item_q_svg_active');
+        document.getElementById(`faq_ans${action}`).classList.toggle('faq_ans_active');
+
+    }
+
+
+
+
+
+    setIdForElemFaq();
+
+
+}
+catch (e){
+    console.log(e)
+}
+// faq end
+
+try{
+    const langBtn = document.getElementById('lang_icons');
+    const langOther = document.getElementById('langOther');
+    const langBlock = document.getElementById('langBlock');
+
+    const openLangs = () => {
+        langOther.classList.toggle('lang_open');
+    }
+    const closedLang = (e) => {
+        e.stopPropagation();
+        langOther.classList.remove('lang_open');
+
+    }
+
+    langBtn.addEventListener('click', openLangs);
+    langBlock.addEventListener('mouseleave', closedLang);
+
+}
+catch (e) {
+    console.log(e)
+}
