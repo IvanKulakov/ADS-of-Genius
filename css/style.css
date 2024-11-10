@@ -230,12 +230,8 @@
   color: #ffffff;
 }
 .command_text_h2{
-  font-size: 17px;
   font-weight: 500;
-  line-height: 26px;
-  text-align: left;
   color: #8D8D8D;
-  width: 70%;
   margin-bottom: 30px;
   margin-top: 30px;
 }
@@ -315,33 +311,30 @@
 }
 
 .flag_box{
+  width: 40%;
+  margin-right: 110px;
   display: flex;
   flex-direction: row;
-  width: 40%;
   justify-content: space-between;
-  margin-right: 110px;
+
 }
 .flag{
+  width: 66px;
+  height: 66px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 66px;
-  height: 66px;
   border: 1px solid #2F00FF;
   border-radius: 12px;
 }
 .lang_box{
   margin-top: 15px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  width: 75%;
   align-items: center;
 }
 .lang_text{
-  font-size: 19px;
   font-weight: 400;
-  line-height: 23px;
   text-align: left;
   color: #FFFFFF;
 }
@@ -701,10 +694,9 @@
   padding-bottom: 100px;
 }
 .result_h1{
-  font-family: Manrope;
-  font-size: 55px;
-  font-weight: 800;
   line-height: 66px;
+  font-weight: 800;
+  font-family: Manrope;
   text-align: left;
   color: #ffffff;
 }
@@ -723,17 +715,14 @@
   margin-bottom: 110px;
 }
 .response_wrapper{
-  background: linear-gradient(90deg, #191919 0%, #121212 100%);
+  background: #000000;
   border: 1px solid #2F00FF;
   border-radius: 24px;
 }
 .response_title{
-  font-size: 67px;
   font-weight: 800;
-  line-height: 80px;
   text-align: left;
   color: #ffffff;
-  margin-bottom: 58px;
 }
 .response_block{
     overflow-x: auto;
@@ -752,7 +741,6 @@
   padding: 36px;
   background-color: #101010;
   border-radius: 24px;
-  width: 350px;
   margin-right: 50px;
 }
 .response_data{
@@ -793,7 +781,7 @@
     font-weight: 400;
     line-height: 26px;
     color: #ffffff;
-    text-align: justify;
+    text-align: left;
 }
 
 
@@ -824,6 +812,7 @@
 }
 .faq_item_q_svg{
   padding: 20px;
+  flex-shrink: 0;
   transform: rotate(360deg);
   transition: transform .5s;
   transform-origin: center center;
@@ -836,11 +825,9 @@
 }
 .faq_item_text{
   font-family: Manrope;
-  font-size: 26px;
   font-weight: 500;
   text-align: left;
   color: #ffffff;
-  margin-left: 20px;
 }
 .faq_ans{
   opacity: 0;
@@ -860,8 +847,6 @@
 }
 .faq_item_text_ans{
   font-family: Manrope;
-  font-size: 20px;
-  line-height: 32px;
   font-weight: 500;
   text-align: left;
   color: #ffffff;
@@ -897,6 +882,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 .bottom_text{
   font-size: 16px;
@@ -912,7 +898,6 @@
 }
 .bottom_text_box{
   position: absolute;
-  display: flex;
   flex-direction: row;
   top: 56px;
   right: 0;
@@ -1097,6 +1082,50 @@
   .research_block_content_btn{
     padding: 20px;
   }
+  .result_h1{
+    font-size: 24px;
+  }
+  .faq_item_text{
+    font-size: 16px;
+    margin-left: 20px;
+  }
+  .faq_item_text_ans{
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .bottom_text_box{
+    display: none;
+  }
+  .command_text_h2{
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+  }
+  .lang_box{
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+  .flag_box{
+    width: 80%;
+    margin-right: 0;
+  }
+  .flag{
+    width: 54px;
+    height: 54px;
+  }
+  .lang_text {
+    line-height: 23px;
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  .response_title{
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 22px;
+  }
+  .response_box{
+    width: 320px;
+  }
 }
 @media (min-width: 410px) {
   .wrapper {
@@ -1246,6 +1275,39 @@
   .research_block_content_btn{
     padding: 20px 80px;
   }
+  .result_h1{
+    font-size: 55px;
+  }
+  .faq_item_text{
+    font-size: 26px;
+    margin-left: 20px;
+  }
+  .faq_item_text_ans{
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .bottom_text_box{
+    display: flex;
+  }
+  .command_text_h2{
+    font-size: 17px;
+    line-height: 26px;
+    text-align: left;
+    width: 70%;
+  }
+  .lang_text {
+    line-height: 23px;
+    font-size: 19px;
+    margin-bottom: 0;
+  }
+  .response_title{
+    font-size: 67px;
+    line-height: 80px;
+    margin-bottom: 58px;
+  }
+  .response_box{
+    width: 350px;
+  }
 }
 @media (min-width: 768px) {
 }
@@ -1264,6 +1326,18 @@
   .navi_links_footer{
     display: flex;
     flex-direction: row;
+  }
+  .lang_box{
+    width: 75%;
+    flex-direction: row;
+  }
+  .flag_box{
+    width: 40%;
+    margin-right: 110px;
+  }
+  .flag{
+    width: 66px;
+    height: 66px;
   }
 
 }

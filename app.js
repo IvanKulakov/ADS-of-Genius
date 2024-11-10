@@ -87,11 +87,12 @@ try{
     const responseBox = document.getElementById('responseBox');
     const responseLeftBtn = document.getElementById('response_left');
     const responseRightBtn = document.getElementById('response_right');
+    const box = document.getElementById('response_box')
     const scrollRight = () => {
-        responseBox.scrollBy(400, 0);
+        responseBox.scrollBy((box.offsetWidth + 50), 0);
     }
     const scrollLeft = () => {
-        responseBox.scrollBy(-400, 0);
+        responseBox.scrollBy(-(box.offsetWidth + 50), 0);
     }
     responseLeftBtn.addEventListener('click', scrollLeft);
     responseRightBtn.addEventListener('click', scrollRight);
