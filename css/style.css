@@ -615,8 +615,12 @@
 .research_block_content_s1_ul{
   margin-bottom: 32px;
 }
+.research_block_content_btn_box{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .research_block_content_btn{
-  padding: 20px 80px;
   border: 1px solid #232121;
   background: none;
   color: #ffffff;
@@ -998,7 +1002,7 @@
   }
   .research_background_s{
     padding: 54px 20px 48px 20px;
-    width: 350px;
+    width: 320px;
   }
   .industries_items_big{
     display: none;
@@ -1066,6 +1070,9 @@
   }
   .marketing_content_button{
     margin: 22px auto 0 auto;
+  }
+  .research_block_content_btn{
+    padding: 20px;
   }
 }
 @media (min-width: 410px) {
@@ -1212,6 +1219,9 @@
   }
   .marketing_content_button{
     margin: 22px 0 0 26px;
+  }
+  .research_block_content_btn{
+    padding: 20px 80px;
   }
 }
 @media (min-width: 768px) {
