@@ -390,17 +390,14 @@
 .marketing_item{
   border-radius: 20px;
   border: 1px solid #232121;
-  height: 72px;
   width: 100%;
   display: flex;
   align-items: center;
   cursor: pointer;
 }
 .marketing_item_name{
-  font-size: 25px;
   font-weight: 600;
   text-align: left;
-  padding-left: 52px;
   transition: color .5s;
   color: #7F7F7F;
 }
@@ -460,7 +457,6 @@
   width: 100%;
 }
 .marketing_content_block{
-  width: 46%;
   z-index: 0;
 }
 .marketing_content_box{
@@ -1048,14 +1044,29 @@
   }
   .marketing_item_box{
     flex-direction: row;
+    margin-right: 16px;
   }
   .marketing_content{
     flex-direction: column;
-    height: 700px;
+    height: 630px;
   }
   .marketing_item_block{
     flex-direction: row;
+    overflow-x: auto;
+    /*overflow-y: hidden;*/
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    /*white-space:nowrap;*/
   }
+  .marketing_content_block{
+    width: auto;
+  }
+  .marketing_item_name{
+    font-size: 16px;
+    padding: 8px 20px;
+    white-space: nowrap;
+  }
+
 }
 @media (min-width: 410px) {
   .wrapper {
@@ -1165,16 +1176,26 @@
   }
   .marketing_item_box{
     flex-direction: row;
+    margin-right: 0px;
   }
   .marketing_content{
     flex-direction: row;
     height: 600px;
   }
   .marketing_item_block{
-    width: 50%;
     flex-direction: column;
-    z-index: 999;
+    overflow-x: hidden;
+    width: 50%;
   }
+  .marketing_content_block{
+    width: 46%;
+  }
+  .marketing_item_name{
+    font-size: 25px;
+    padding: 0 0 0 52px;
+  }
+  .marketing_item{
+    height: 72px;
 }
 @media (min-width: 768px) {
 }
