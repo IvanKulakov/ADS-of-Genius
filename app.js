@@ -17,11 +17,13 @@ catch (e) {
     console.log(e);
 }
 
+// market start
 try {
     const marketKB = document.getElementsByClassName('marketing_content_box');
     const marketBtn = document.getElementsByClassName('marketing_svg');
     const marketSVG = document.getElementsByClassName('marketing_svg_btn');
     const marketItemName = document.getElementsByClassName('marketing_item_name');
+    const marketItem = document.getElementsByClassName('marketing_item');
 
     const idForItems = () =>{
         for(let i = 0; i < marketKB.length; i++){
@@ -29,9 +31,15 @@ try {
             marketKB[i].classList.add('marketing_content_invisible');
             marketKB[0].classList.remove('marketing_content_invisible');
         }
-        for(let i = 0; i < marketBtn.length; i++){
-            marketBtn[i].id ='marketBtn' + i;
-            marketBtn[i].addEventListener('click', setActive);
+        for(let i = 0; i < marketItem.length; i++){
+            marketItem[i].id = 'marketItem'+i;
+            marketItem[i].addEventListener('click', setActive);
+        }
+        if(!!marketBtn) {
+            for (let i = 0; i < marketBtn.length; i++) {
+                marketBtn[i].id = 'marketBtn' + i;
+                marketBtn[i].addEventListener('click', setActive);
+            }
         }
         for(let i = 0; i < marketSVG.length; i++){
             marketSVG[i].id ='marketSVG' + i;
@@ -73,6 +81,8 @@ catch (e) {
     console.log(e)
 }
 
+// market end
+
 try{
     const responseBox = document.getElementById('responseBox');
     const responseLeftBtn = document.getElementById('response_left');
@@ -110,8 +120,6 @@ try{
 catch (e) {
     console.log(e);
 }
-
-
 //research end
 
 // faq start
@@ -159,17 +167,21 @@ catch (e){
 }
 // faq end
 
+//lang start
 try{
     const langBtn = document.getElementById('lang_icons');
     const langOther = document.getElementById('langOther');
     const langBlock = document.getElementById('langBlock');
+    const langSVG = document.getElementById('langSVG');
 
     const openLangs = () => {
         langOther.classList.toggle('lang_open');
+        langSVG.classList.toggle('lang_box_svg_action')
     }
     const closedLang = (e) => {
         e.stopPropagation();
         langOther.classList.remove('lang_open');
+        langSVG.classList.remove('lang_box_svg_action')
 
     }
 
@@ -180,3 +192,58 @@ try{
 catch (e) {
     console.log(e)
 }
+//lang end
+
+//industries start
+try{
+    const industriesItems = document.getElementsByClassName('industries_mob');
+    const industriesBtnLeft = document.getElementById('industries_nav_left');
+    const industriesBtnRight = document.getElementById('industries_nav_right');
+
+
+    const setIdForElem = () => {
+        for (let i = 0; i < industriesItems.length; i++){
+            industriesItems[i].id = 'industriesItems' + i;
+            industriesItems[i].classList.add('invisible');
+            industriesItems[0].classList.remove('invisible');
+        }
+    }
+
+    const isActive = () => {
+        for (let i = 0; i < industriesItems.length; i++){
+            if(!industriesItems[i].classList.contains('invisible')) {
+            return i;
+        }}}
+
+    const stepLeft = () => {
+        let active = Number(isActive());
+        if (active === 0) {
+                    return false;
+                }
+                    else {
+                        for (let i = 0; i < industriesItems.length; i++){
+                            industriesItems[i].classList.add('invisible'); }
+                            industriesItems[active - 1].classList.remove('invisible')
+                }
+            }
+    const stepRight = () => {
+        let active = Number(isActive());
+        if ((active + 1) === industriesItems.length) {
+            return false;
+        }
+        else {
+            for (let i = 0; i < industriesItems.length; i++) {
+                industriesItems[i].classList.add('invisible');
+                industriesItems[active + 1].classList.remove('invisible');
+            }
+        }
+    }
+    setIdForElem();
+
+    industriesBtnLeft.addEventListener('click', stepLeft);
+    industriesBtnRight.addEventListener('click', stepRight)
+}
+catch (e) {
+    console.log(e)
+}
+//industries end
