@@ -114,10 +114,10 @@ try{
         }
     }
     setIdForItems();
+
     const researchBox = document.getElementById('researchBox1');
 
     if(researchBox.offsetWidth === 540) {
-        console.log(researchBox.offsetWidth);
         const scrollRight = () => {
             researchBlock.scrollBy((540 + 80), 0);
         }
@@ -128,8 +128,7 @@ try{
         researchRightBtn.addEventListener('click', scrollRight);
         researchLeftBtn.addEventListener('click', scrollLeft);
     }
-    if(researchBox.offsetWidth === 320) {
-        console.log(researchBox.offsetWidth);
+    if(researchBox.offsetWidth < 500) {
 
         const invisItems = () => {
             for (let i = 0; i < researchBoxs.length; i++) {
