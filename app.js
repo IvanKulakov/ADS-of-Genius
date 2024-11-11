@@ -366,6 +366,13 @@ catch (e) {
             textData[numb].style.height = "150px";
             openBtn[numb].classList.remove('invisible');
             btns.classList.remove('invisible');
+
+        })
+        textData[numb].addEventListener('touchmove', function () {
+            textData[numb].style.height = "150px";
+            openBtn[numb].classList.remove('invisible');
+            btns.classList.remove('invisible');
+
         })
     }
     limitHi();
