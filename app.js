@@ -104,19 +104,74 @@ catch (e){
 //research start
 try{
     const researchBlock = document.getElementById('research_block')
-    const researchBox = document.getElementById('research_box')
+    const researchBoxs = document.getElementsByClassName('research_background_s');
     const researchLeftBtn = document.getElementById('research_nav_left');
     const researchRightBtn = document.getElementById('research_nav_right');
 
-    const scrollRight = () => {
-        researchBlock.scrollBy((researchBox.offsetWidth + 80), 0);
+    const setIdForItems = () => {
+        for (let i = 0; i < researchBoxs.length; i++){
+            researchBoxs[i].id = 'researchBox' + i;
+        }
     }
-    const scrollLeft = () => {
-        researchBlock.scrollBy(-(researchBox.offsetWidth + 80), 0);
-    }
+    setIdForItems();
+    const researchBox = document.getElementById('researchBox1');
 
-    researchRightBtn.addEventListener('click', scrollRight);
-    researchLeftBtn.addEventListener('click', scrollLeft);
+    if(researchBox.offsetWidth === 540) {
+        console.log(researchBox.offsetWidth);
+        const scrollRight = () => {
+            researchBlock.scrollBy((540 + 80), 0);
+        }
+        const scrollLeft = () => {
+            researchBlock.scrollBy(-(540 + 80), 0);
+        }
+
+        researchRightBtn.addEventListener('click', scrollRight);
+        researchLeftBtn.addEventListener('click', scrollLeft);
+    }
+    if(researchBox.offsetWidth === 320) {
+        console.log(researchBox.offsetWidth);
+
+        const invisItems = () => {
+            for (let i = 0; i < researchBoxs.length; i++) {
+                researchBoxs[i].classList.add('invisible')
+                researchBoxs[0].classList.remove('invisible')
+            }
+
+        }
+        invisItems();
+        const isActive = () => {
+            for (let i = 0; i < researchBoxs.length; i++){
+                if(!researchBoxs[i].classList.contains('invisible')) {
+                    return i;
+                }}}
+        const stepLeft = () => {
+            let active = Number(isActive());
+            if (active === 0) {
+                return false;
+            }
+            else {
+                for (let i = 0; i < researchBoxs.length; i++){
+                    researchBoxs[i].classList.add('invisible'); }
+                researchBoxs[active - 1].classList.remove('invisible')
+            }
+        }
+        const stepRight = () => {
+            let active = Number(isActive());
+            if ((active + 1) === researchBoxs.length) {
+                return false;
+            }
+            else {
+                for (let i = 0; i < researchBoxs.length; i++) {
+                    researchBoxs[i].classList.add('invisible');
+                    researchBoxs[active + 1].classList.remove('invisible');
+                }
+            }
+        }
+
+        researchLeftBtn.addEventListener('click', stepLeft);
+        researchRightBtn.addEventListener('click', stepRight);
+
+    }
 }
 catch (e) {
     console.log(e);
