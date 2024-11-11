@@ -552,13 +552,14 @@
   color: #ffffff;
 }
 .research_background_s{
+  position: relative;
   padding: 54px 100px 48px 100px;
   height: 624px;
+  width: 542px;
   border-radius: 24px;
   box-sizing: border-box;
   border: 1px solid #232121;
   display: inline-block;
-  justify-content: space-between;
   overflow: hidden;
   flex-shrink: 0;
 
@@ -618,9 +619,13 @@
   margin-bottom: 32px;
 }
 .research_block_content_btn_box{
+  /*position: absolute;*/
+  /*left: 50%;*/
+  /*transform: translateX(-50%)*/
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: end;
 }
 .research_block_content_btn{
   border: 1px solid #232121;
