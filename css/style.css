@@ -558,6 +558,7 @@
   box-sizing: border-box;
   border: 1px solid #232121;
   display: inline-block;
+  justify-content: space-between;
   overflow: hidden;
   flex-shrink: 0;
 
