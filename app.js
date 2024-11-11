@@ -83,24 +83,24 @@ catch (e) {
 
 // market end
 
-try{
-    const responseBox = document.getElementById('responseBox');
-    const responseLeftBtn = document.getElementById('response_left');
-    const responseRightBtn = document.getElementById('response_right');
-    const box = document.getElementById('response_box')
-    const scrollRight = () => {
-        responseBox.scrollBy((box.offsetWidth + 50), 0);
-    }
-    const scrollLeft = () => {
-        responseBox.scrollBy(-(box.offsetWidth + 50), 0);
-    }
-    responseLeftBtn.addEventListener('click', scrollLeft);
-    responseRightBtn.addEventListener('click', scrollRight);
-
-}
-catch (e){
-    console.log(e)
-}
+// try{
+//     const responseBox = document.getElementById('responseBox');
+//     const responseLeftBtn = document.getElementById('response_left');
+//     const responseRightBtn = document.getElementById('response_right');
+//     const box = document.getElementById('response_box')
+//     const scrollRight = () => {
+//         responseBox.scrollBy((box.offsetWidth + 50), 0);
+//     }
+//     const scrollLeft = () => {
+//         responseBox.scrollBy(-(box.offsetWidth + 50), 0);
+//     }
+//     responseLeftBtn.addEventListener('click', scrollLeft);
+//     responseRightBtn.addEventListener('click', scrollRight);
+//
+// }
+// catch (e){
+//     console.log(e)
+// }
 //research start
 try{
     const researchBlock = document.getElementById('research_block')
@@ -333,3 +333,41 @@ catch (e) {
     console.log(e)
 }
 //industries end
+
+//response open start
+
+ const textData = document.getElementsByClassName('response_data_content_text');
+    const openBtn = document.getElementsByClassName('response_data_content_button');
+    const btns = document.getElementById('response_data_nav_block');
+    const response = document.getElementById('response_background')
+    const limitHi = () => {
+
+        for (let i = 0; i < openBtn.length; i++){
+            openBtn[i].id = 'openBtn' + i;
+            openBtn[i].addEventListener('click', openData)
+        }
+        for (let i = 0; i < textData.length; i++){
+            textData[i].id = 'textData' + i;
+            console.log(textData[i].offsetHeight)
+
+            if(textData[i].offsetHeight < 27){
+                openBtn[i].classList.add('invisible');
+            }
+            textData[i].style.height = "150px";
+        }
+
+    }
+    const openData = (e) => {
+        let numb = e.target.id.slice(-1);
+        btns.classList.add('invisible');
+        textData[numb].style.height = 'fit-content';
+        openBtn[numb].classList.add('invisible');
+        textData[numb].addEventListener('mouseleave', function () {
+            textData[numb].style.height = "150px";
+            openBtn[numb].classList.remove('invisible');
+            btns.classList.remove('invisible');
+        })
+    }
+    limitHi();
+
+////response open end

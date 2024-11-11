@@ -69,7 +69,7 @@ const sl2 = new Swiper(slider2,{
     //
     // },
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".command_units_nav-next",
+        prevEl: ".command_units_nav-prev",
     },
 })

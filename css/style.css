@@ -707,7 +707,7 @@
 }
 
 .response_background{
-  margin-bottom: 110px;
+  margin-bottom: 80px;
 }
 .response_wrapper{
   background: #000000;
@@ -718,15 +718,6 @@
   font-weight: 800;
   text-align: left;
   color: #ffffff;
-}
-.response_block{
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 .response_box{
   box-sizing: border-box;
@@ -769,15 +760,31 @@
 }
 .response_data_content{
   height: fit-content;
+  overflow-block: auto;
 }
 .response_data_content_text{
-  font-size: 16px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 26px;
     color: #ffffff;
     text-align: left;
-}
+    overflow: hidden;
 
+
+
+}
+.response_data_content_button{
+  font-size: 16px;
+  color: #2F00FF;
+  padding-top: 16px;
+  cursor: pointer;
+}
+.response_data_nav_block{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 .faq_background{
   margin-bottom: 60px;
