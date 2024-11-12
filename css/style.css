@@ -731,7 +731,10 @@
 .response_data{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 26px;
+
 }
 .response_data_img{
   width: 56px;
@@ -741,7 +744,7 @@
 .response_data_name{
   display: flex;
   flex-direction: column;
-  margin-bottom: 26px;
+  padding-left: 26px;
 }
 .response_data_name_text{
   font-size: 21px;
@@ -759,8 +762,7 @@
   color: #ffffff;
 }
 .response_data_content{
-  height: fit-content;
-  overflow-block: auto;
+
 }
 .response_data_content_text{
     font-size: 16px;

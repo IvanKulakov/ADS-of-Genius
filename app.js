@@ -340,20 +340,30 @@ catch (e) {
     const openBtn = document.getElementsByClassName('response_data_content_button');
     const btns = document.getElementById('response_data_nav_block');
     const response = document.getElementById('response_background')
+    const responseBlock = document.getElementsByClassName('response_box')
     const limitHi = () => {
 
         for (let i = 0; i < openBtn.length; i++){
             openBtn[i].id = 'openBtn' + i;
             openBtn[i].addEventListener('click', openData)
         }
-        for (let i = 0; i < textData.length; i++){
-            textData[i].id = 'textData' + i;
-            console.log(textData[i].offsetHeight)
+        for (let i = 0; i < responseBlock.length; i++) {
+            console.log(responseBlock[i].offsetHeight)
 
-            if(textData[i].offsetHeight < 27){
+        }
+            for (let i = 0; i < textData.length; i++){
+            textData[i].id = 'textData' + i;
+
+            if(((textData[i].offsetHeight < 27) && (textData[i].offsetWidth > 1100))
+            ||
+            ((textData[i].offsetHeight < 53) && (textData[i].offsetWidth < 1100) && (textData[i].offsetWidth > 640))
+            ||
+            ((textData[i].offsetHeight < 157) && (textData[i].offsetWidth < 640))
+
+            ){
                 openBtn[i].classList.add('invisible');
             }
-            textData[i].style.height = "150px";
+            textData[i].style.height = "155px";
         }
 
     }
