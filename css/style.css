@@ -536,7 +536,6 @@
 
 .research_block{
   overflow-x: auto;
-  overflow-y: hidden;
   scroll-behavior: smooth;
   scrollbar-width: none;
   white-space:nowrap;
@@ -552,21 +551,28 @@
   color: #ffffff;
 }
 .research_background_s{
+  display: inline-block;
   position: relative;
   padding: 54px 100px 48px 100px;
-  height: 624px;
+  height: 700px;
   width: 542px;
   border-radius: 24px;
   box-sizing: border-box;
   border: 1px solid #232121;
-  display: inline-block;
   overflow: hidden;
   flex-shrink: 0;
-
+  white-space: pre-line;
+  justify-content: space-between;
+  flex-direction: column;
 }
 .research_background_s1{
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, #000000 92%), url("../img/s1.png") no-repeat center;
   background-size: cover;
+}
+.research_block_title_box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .research_block_top_img_box{
   display: flex;
@@ -575,8 +581,8 @@
   align-items: center;
 }
 .research_block_top_img{
-  width: 102px;
-  height: 58px;
+  /*width: 102px;*/
+  /*height: 58px;*/
 }
 .research_block_title{
   font-family: Manrope;
@@ -587,6 +593,9 @@
   color: #ffffff;
   margin-bottom: 34px;
 }
+.research_block_title_lang{
+  margin-bottom: 0;
+}
 .research_block_content{
   font-family: Manrope;
   font-size: 21px;
@@ -594,10 +603,9 @@
   line-height: 32px;
   text-align: center;
   color: #ffffff;
-  white-space: pre-wrap;
 }
 .research_block_content_mb{
-  margin-bottom: 74px;
+  margin-bottom: 40px;
 
 }
 .research_block_content_mr{
@@ -607,7 +615,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 26px;
+  margin-bottom: 16px;
 }
 .research_block_content_li_text{
   font-family: Manrope;
@@ -616,7 +624,6 @@
   color: #ffffff;
 }
 .research_block_content_s1_ul{
-  margin-bottom: 32px;
 }
 .research_block_content_btn_box{
   /*position: absolute;*/
@@ -637,6 +644,7 @@
   border-radius: 10px;
   box-sizing: border-box;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .research_background_s2{
@@ -1066,6 +1074,7 @@
     padding: 8px 20px;
     white-space: nowrap;
   }
+
   .response_wrapper{
     padding: 20px 16px;
   }
