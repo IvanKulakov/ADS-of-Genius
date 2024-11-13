@@ -83,24 +83,7 @@ catch (e) {
 
 // market end
 
-// try{
-//     const responseBox = document.getElementById('responseBox');
-//     const responseLeftBtn = document.getElementById('response_left');
-//     const responseRightBtn = document.getElementById('response_right');
-//     const box = document.getElementById('response_box')
-//     const scrollRight = () => {
-//         responseBox.scrollBy((box.offsetWidth + 50), 0);
-//     }
-//     const scrollLeft = () => {
-//         responseBox.scrollBy(-(box.offsetWidth + 50), 0);
-//     }
-//     responseLeftBtn.addEventListener('click', scrollLeft);
-//     responseRightBtn.addEventListener('click', scrollRight);
-//
-// }
-// catch (e){
-//     console.log(e)
-// }
+
 //research start
 try{
     const researchBlock = document.getElementById('research_block')
@@ -128,7 +111,7 @@ try{
         researchRightBtn.addEventListener('click', scrollRight);
         researchLeftBtn.addEventListener('click', scrollLeft);
     }
-    if(researchBox.offsetWidth < 500) {
+    if(researchBox.offsetWidth < 540) {
 
         const invisItems = () => {
             for (let i = 0; i < researchBoxs.length; i++) {
@@ -339,17 +322,12 @@ catch (e) {
  const textData = document.getElementsByClassName('response_data_content_text');
     const openBtn = document.getElementsByClassName('response_data_content_button');
     const btns = document.getElementById('response_data_nav_block');
-    const response = document.getElementById('response_background')
-    const responseBlock = document.getElementsByClassName('response_box')
+    const response = document.getElementById('response_background');
+    const responseBlock = document.getElementsByClassName('response_box');
     const limitHi = () => {
-
         for (let i = 0; i < openBtn.length; i++){
             openBtn[i].id = 'openBtn' + i;
             openBtn[i].addEventListener('click', openData)
-        }
-        for (let i = 0; i < responseBlock.length; i++) {
-            console.log(responseBlock[i].offsetHeight)
-
         }
             for (let i = 0; i < textData.length; i++){
             textData[i].id = 'textData' + i;
